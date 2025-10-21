@@ -11454,3 +11454,66 @@ section#contact form#contactForm :-ms-input-placeholder {
   transform: scale(1.05);
   color: #d89d00; /* nuance légèrement plus foncée au survol */
 }
+
+/* Limite la largeur de la phrase sous le titre */
+.mw-640 { max-width: 640px; }
+
+/* Carte portfolio plus aérée */
+.portfolio-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden; /* pour que l'image arrondie suive la carte */
+}
+
+/* Miniature homogène et plus petite */
+.portfolio-thumb {
+  width: 100%;
+  height: 240px;            /* <- ajuste 200–280 selon ton goût */
+  object-fit: cover;        /* recadre proprement */
+  display: block;
+}
+
+/* Légère amélioration de la légende */
+.portfolio-caption {
+  padding: 1.25rem 1rem 1.5rem;
+  text-align: center;
+}
+.portfolio-caption-heading { font-size: 1.25rem; font-weight: 700; }
+
+/* Overlay + au survol (si pas déjà dans ton fichier) */
+.portfolio-link { position: relative; display: block; }
+.portfolio-link .portfolio-hover {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(245, 180, 0, 0.9);  /* ton jaune */
+  opacity: 0; transition: opacity .25s ease-in-out; z-index: 1;
+}
+.portfolio-link .portfolio-hover-content { color: #fff; }
+.portfolio-link:hover .portfolio-hover { opacity: 1; }
+
+/* Badges “soft” arrondis */
+.badge-soft {
+  background: #eef2f6;          /* fond doux */
+  color: #24303f;               /* texte gris foncé lisible */
+  border-radius: 9999px;        /* pilule */
+  padding: .4rem .75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+}
+
+.badge-soft i { opacity: .85; } /* icône un peu atténuée */
+
+.keyfact {
+  font-weight: 600;
+  font-size: 0.9rem;            /* lisible et compact */
+  line-height: 1;
+}
+
+/* Option : survol léger */
+.badge-soft:hover {
+  background: #e7edf4;
+}
+
+/* Si tu veux les teinter légèrement avec ton jaune */
+.badge-soft.keyfact i { color: var(--primary, #f5b400); }

@@ -95,106 +95,75 @@
                         </div>
         </section>
 
-        <!-- creer Grid-->
-        <section class="page-section bg-light" id="creer">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Créer</h2>
-                    <h3 class="section-subheading text-muted">Ajouter une ou deux phrases qui expliquent le lien entre le dialogue et la création, ou plutôt la co-création, de mesures à mettre oeuvre</h3>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- Portfolio item 1-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/img/portfolio/Jouvence nature.jpg" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Co-créer en s'inspirant des méthodes de pensée design</div>
-                                <div class="portfolio-caption-subheading text-muted">Jouvence, 15-19 juin 2025</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- Portfolio item 2-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/img/portfolio/proto2.png" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Cube d'innovation responsable quantique</div>
-                                <div class="portfolio-caption-subheading text-muted">Prototype #1</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- Portfolio item 3-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/img/portfolio/3.jpg" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Finish</div>
-                                <div class="portfolio-caption-subheading text-muted">Identity</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                        <!-- Portfolio item 4-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/img/portfolio/4.jpg" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Lines</div>
-                                <div class="portfolio-caption-subheading text-muted">Branding</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-                        <!-- Portfolio item 5-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/img/portfolio/5.jpg" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Southwest</div>
-                                <div class="portfolio-caption-subheading text-muted">Website Design</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <!-- Portfolio item 6-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/img/portfolio/6.jpg" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Window</div>
-                                <div class="portfolio-caption-subheading text-muted">Photography</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <!-- Créer -->
+<section class="page-section bg-light" id="creer"> <!-- évite l’accent dans l’id -->
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-heading text-uppercase">Créer</h2>
+        <p class="section-subheading text-muted mx-auto lead mw-640">
+          Dialoguer pour donner vie à des mesures concrètes et situées en soutien au développement responsable de technologies quantiques spécifiques
+        </p>
+  
+        <!-- bouton vers la page dédiée -->
+        <a class="btn btn-primary btn-md rounded-pill shadow-sm mt-2" href="creer.html">
+          En savoir plus <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+      </div>
+  
+      <!-- grille (espacement au-dessus + entre les cartes) -->
+      <div class="row g-4 mt-4">   <!-- mt-4 = espace sous le bouton ; g-4 = gouttières -->
+        <!-- Portfolio item 1-->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="portfolio-card shadow-sm h-100">
+            <a class="portfolio-link" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+              </div>
+              <img class="img-fluid portfolio-thumb" src="assets/img/portfolio/Jouvence nature.jpg" alt="...">
+            </a>
+            <div class="portfolio-caption">
+              <div class="portfolio-caption-heading">Co-créer en s'inspirant des méthodes de pensée design</div>
+              <div class="portfolio-caption-subheading text-muted">Jouvence, 15-19 juin 2025</div>
             </div>
+          </div>
+        </div>
+  
+        <!-- Portfolio item 2-->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="portfolio-card shadow-sm h-100">
+            <a class="portfolio-link" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+              </div>
+              <img class="img-fluid portfolio-thumb" src="assets/img/portfolio/proto2.png" alt="...">
+            </a>
+            <div class="portfolio-caption">
+              <div class="portfolio-caption-heading">Cube d'innovation responsable quantique</div>
+              <div class="portfolio-caption-subheading text-muted">Prototype #1</div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Portfolio item 3-->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="portfolio-card shadow-sm h-100">
+            <a class="portfolio-link" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+              </div>
+              <img class="img-fluid portfolio-thumb" src="assets/img/portfolio/3.jpg" alt="...">
+            </a>
+            <div class="portfolio-caption">
+              <div class="portfolio-caption-heading">Finish</div>
+              <div class="portfolio-caption-subheading text-muted">Identity</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+                
         </section>
         <!-- rayonner-->
         <section class="page-section bg-light" id="rayonner">
