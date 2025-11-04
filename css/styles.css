@@ -11040,13 +11040,14 @@ header.masthead .masthead-heading {
   font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-
+/* === TIMELINE – version nettoyée et harmonisée === */
 .timeline {
   position: relative;
   padding: 0;
   list-style: none;
 }
-.timeline:before {
+
+.timeline::before {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -11056,18 +11057,21 @@ header.masthead .masthead-heading {
   content: "";
   background-color: #e9ecef;
 }
+
+/* Éléments de la timeline */
 .timeline > li {
   position: relative;
   min-height: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 70px; /* espacement resserré entre les cercles */
 }
-.timeline > li:after, .timeline > li:before {
-  display: table;
-  content: " ";
+.timeline > li:last-child {
+  margin-bottom: 0;
 }
-.timeline > li:after {
-  clear: both;
+.timeline > li.timeline-inverted {
+  margin-top: 0; /* supprime le léger décalage gauche/droite */
 }
+
+/* Panneaux de contenu */
 .timeline > li .timeline-panel {
   position: relative;
   float: right;
@@ -11075,61 +11079,49 @@ header.masthead .masthead-heading {
   padding: 0 20px 0 100px;
   text-align: left;
 }
-.timeline > li .timeline-panel:before {
+.timeline > li .timeline-panel::before {
   right: auto;
   left: -15px;
   border-right-width: 15px;
   border-left-width: 0;
 }
-.timeline > li .timeline-panel:after {
+.timeline > li .timeline-panel::after {
   right: auto;
   left: -14px;
   border-right-width: 14px;
   border-left-width: 0;
 }
+
+/* Cercles */
 .timeline > li .timeline-image {
   position: absolute;
   z-index: 100;
   left: 0;
-  width: 80px;
-  height: 80px;
-  margin-left: 0;
   text-align: center;
   color: white;
   border: 7px solid #e9ecef;
   border-radius: 100%;
   background-color: #ffc800;
+  width: 90px;
+  height: 90px;
 }
-.timeline > li .timeline-image h4, .timeline > li .timeline-image .h4 {
+.timeline .timeline-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.timeline > li .timeline-image h4 {
   font-size: 10px;
   line-height: 14px;
   margin-top: 12px;
 }
-.timeline > li.timeline-inverted > .timeline-panel {
-  float: right;
-  padding: 0 20px 0 100px;
-  text-align: left;
-}
-.timeline > li.timeline-inverted > .timeline-panel:before {
-  right: auto;
-  left: -15px;
-  border-right-width: 15px;
-  border-left-width: 0;
-}
-.timeline > li.timeline-inverted > .timeline-panel:after {
-  right: auto;
-  left: -14px;
-  border-right-width: 14px;
-  border-left-width: 0;
-}
-.timeline > li:last-child {
-  margin-bottom: 0;
-}
-.timeline .timeline-heading h4, .timeline .timeline-heading .h4 {
+
+/* Titres et texte */
+.timeline .timeline-heading h4 {
   margin-top: 0;
   color: inherit;
 }
-.timeline .timeline-heading h4.subheading, .timeline .timeline-heading .subheading.h4 {
+.timeline .timeline-heading h4.subheading {
   text-transform: none;
 }
 .timeline .timeline-body > ul,
@@ -11137,13 +11129,13 @@ header.masthead .masthead-heading {
   margin-bottom: 0;
 }
 
+/* === Responsive === */
 @media (min-width: 768px) {
-  .timeline:before {
+  .timeline::before {
     left: 50%;
   }
   .timeline > li {
     min-height: 100px;
-    margin-bottom: 100px;
   }
   .timeline > li .timeline-panel {
     float: left;
@@ -11153,11 +11145,11 @@ header.masthead .masthead-heading {
   }
   .timeline > li .timeline-image {
     left: 50%;
-    width: 100px;
-    height: 100px;
-    margin-left: -50px;
+    width: 110px;
+    height: 110px;
+    margin-left: -55px;
   }
-  .timeline > li .timeline-image h4, .timeline > li .timeline-image .h4 {
+  .timeline > li .timeline-image h4 {
     font-size: 13px;
     line-height: 18px;
     margin-top: 16px;
@@ -11168,6 +11160,7 @@ header.masthead .masthead-heading {
     text-align: left;
   }
 }
+
 @media (min-width: 992px) {
   .timeline > li {
     min-height: 150px;
@@ -11176,19 +11169,17 @@ header.masthead .masthead-heading {
     padding: 0 20px 20px;
   }
   .timeline > li .timeline-image {
-    width: 150px;
-    height: 150px;
-    margin-left: -75px;
+    width: 140px;
+    height: 140px;
+    margin-left: -70px;
   }
-  .timeline > li .timeline-image h4, .timeline > li .timeline-image .h4 {
+  .timeline > li .timeline-image h4 {
     font-size: 18px;
     line-height: 26px;
     margin-top: 30px;
   }
-  .timeline > li.timeline-inverted > .timeline-panel {
-    padding: 0 20px 20px;
-  }
 }
+
 @media (min-width: 1200px) {
   .timeline > li {
     min-height: 170px;
@@ -11197,17 +11188,19 @@ header.masthead .masthead-heading {
     padding: 0 20px 20px 100px;
   }
   .timeline > li .timeline-image {
-    width: 170px;
-    height: 170px;
-    margin-left: -85px;
+    width: 160px;
+    height: 160px;
+    margin-left: -80px;
   }
-  .timeline > li .timeline-image h4, .timeline > li .timeline-image .h4 {
+  .timeline > li .timeline-image h4 {
     margin-top: 40px;
   }
   .timeline > li.timeline-inverted > .timeline-panel {
     padding: 0 100px 20px 20px;
   }
 }
+
+
 .team-member {
   margin-bottom: 3rem;
   text-align: center;
@@ -11316,61 +11309,6 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 .theme-card:hover {
   transform: translateY(-5px);
-}
-
-.timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-.timeline-cycle h4 {
-  margin-bottom: 1rem;
-}
-.timeline-cycle ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 0;
-}
-.timeline-cycle li {
-  background: #fdd835; /* jaune accent */
-  color: #000;
-  padding: 0.5rem 1rem;
-  border-radius: 50px;
-  position: relative;
-  cursor: pointer;
-  font-size: 0.9rem;
-  transition: transform 0.2s ease-in-out;
-}
-.timeline-cycle li:hover {
-  transform: scale(1.1);
-}
-.timeline-cycle li.future {
-  background: #e0e0e0;
-  color: #666;
-}
-.timeline-cycle li::after {
-  content: attr(data-theme);
-  display: block;
-  font-size: 0.75rem;
-  color: #555;
-  margin-top: 0.25rem;
-}
-.timeline-cycle li[data-info]:hover::before {
-  content: attr(data-info);
-  position: absolute;
-  top: -60px;
-  left: 0;
-  width: 250px;
-  background: #333;
-  color: #fff;
-  padding: 0.5rem;
-  border-radius: 8px;
-  font-size: 0.75rem;
-  white-space: normal;
-  z-index: 10;
 }
 
 /* === Amélioration des verbatims === */
