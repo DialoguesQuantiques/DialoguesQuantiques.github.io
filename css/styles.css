@@ -11455,3 +11455,14 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 /* Si tu veux les teinter légèrement avec ton jaune */
 .badge-soft.keyfact i { color: var(--primary, #f5b400); }
+
+/* Affinage sections Rayonnement */
+#rayonnement_scientifique .card h4,
+#rayonnement_public .card h5 { margin-bottom: .5rem; }
+
+#rayonnement_scientifique ul li { line-height: 1.4; }
+#rayonnement_scientifique .card-footer { padding-top: 0; }
+
+/* Réduit l'espace sous le masthead de cette page si besoin */
+header.masthead { padding-bottom: 4rem; }
+#navigation-page { padding-top: 2rem; }
