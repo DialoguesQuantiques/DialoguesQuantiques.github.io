@@ -1,0 +1,66 @@
+/* =====================================================
+CUSTOM CSS - Dialogues Quantiques
+===================================================== */
+
+/* NAVBAR */
+#mainNav{
+    box-shadow:0 4px 18px rgba(0,0,0,0.08);
+}
+
+/* CARTES */
+.portfolio-item{
+    transition:all 0.25s ease;
+}
+
+.portfolio-item:hover{
+    transform:translateY(-6px);
+}
+
+/* MODALES */
+.portfolio-modal .modal-dialog{
+    max-width:900px;
+}
+
+.portfolio-modal .modal-content{
+    border:none;
+    border-radius:18px;
+    padding:2rem;
+}
+
+.portfolio-modal h2{
+    text-transform:none;
+    font-size:2rem;
+}
+
+.portfolio-modal img{
+    border-radius:12px;
+}
+
+.portfolio-modal p{
+    line-height:1.7;
+}
+
+/* BOUTONS */
+.btn-primary{
+    border-radius:10px;
+}
+
+.portfolio-modal .modal-body{
+    text-align:center;
+}
+
+.portfolio-modal .modal-body p:last-of-type{
+    text-align:left;
+    max-width:700px;
+    margin:auto;
+}
+
+#recommandations{
+    background:#ffffff;
+    padding-top:7rem;
+    padding-bottom:7rem;
+}
+
+body{
+    outline:10px solid red;
+    }
